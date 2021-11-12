@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/black"
+	tools:context=".activity.MainActivity"
+	tools:deviceIds="wear">
+
+	<TextClock
+		android:id="@+id/textTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="12:00 AM"
+		android:textAlignment="center"
+		android:textSize="12sp"
+		android:layout_marginStart="5dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<LinearLayout
+		android:id="@+id/layoutStatus"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginEnd="5dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="UseCompoundDrawables">
+
+		<TextView
+			android:id="@+id/textBattery"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:text="\100%"
+			android:textSize="12sp"/>
+
+		<ImageView
+			android:id="@+id/imageBattery"
+			android:layout_width="12dp"
+			android:layout_height="12dp"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/battery"
+			android:contentDescription="@string/battery"/>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/textHR"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:gravity="center"
+		tools:text="220"
+		android:textAlignment="center"
+		android:textSize="43sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/textAccuracy"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:gravity="center_horizontal"
+		tools:text="Accuracy: No Contact"
+		android:textAlignment="center"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toTopOf="@+id/textHR"
+		app:layout_constraintTop_toBottomOf="@id/layoutStatus"/>
+
+	<TextView
+		android:id="@+id/textIpAddress"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		tools:text="http://[????::????:????:????:????]:8080\nhttp://192.168.100.123:8080"
+		android:textAlignment="center"
+		android:textSize="11sp"
+		android:layout_marginBottom="@dimen/ip_margin_bottom"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textHR"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+img {
+	width:100vmin;
+	height:100vmin;
+}
+
+.textContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -58%);
+}
+
+#bpm {
+	color:white;
+	font-size:35vmin;
+	font-weight:bold;
+	text-anchor:middle;
+	font-family:Raiju, Seville, Verdana, Arial;
+}
