@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name" translatable="false">Heart Streamer</string>
+	<string name="service_notification_channel_id" translatable="false">hrservice</string>
+	<string name="service_notification_name">Heart Streamer Background Service</string>
+	<string name="service_notification_text">Device is currently broadcasting your heart rate</string>
+	<string name="text_background_streaming">Broadcasting will continue in the background</string>
+	<string name="text_no_ip_found">Network IP Address could not be found</string>
+	<string name="text_stop">Close</string>
+	<string name="app_not_found">App not found on any reachable devices, remotely launching store</string>
+	<string name="no_devices_found">No devices found</string>
+</resources>

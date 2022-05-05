@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/black"
+	tools:context=".activity.MainActivity"
+	tools:deviceIds="wear"
+	android:padding="1dp">
+
+	<TextClock
+		android:id="@+id/textTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAlignment="center"
+		android:textSize="12sp"
+		app:layout_constraintEnd_toStartOf="@id/layoutBattery"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="12:00 AM"/>
+
+	<LinearLayout
+		android:id="@+id/layoutBattery"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/textTime"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="UseCompoundDrawables">
+
+		<TextView
+			android:id="@+id/textBattery"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:text="\100%"
+			android:textSize="12sp"/>
+
+		<ImageView
+			android:id="@+id/imageBattery"
+			android:layout_width="12dp"
+			android:layout_height="12dp"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/battery"
+			android:contentDescription="@string/battery"/>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/textHR"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:gravity="center"
+		android:textAlignment="center"
+		android:textSize="43sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/buttonClose"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="220"/>
+
+	<ImageButton
+		android:id="@+id/buttonClose"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentEnd="true"
+		android:contentDescription="@string/text_stop"
+		android:src="@android:drawable/ic_menu_close_clear_cancel"
+		app:layout_constraintBottom_toBottomOf="@id/textHR"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/textHR"/>
+
+	<TextView
+		android:id="@+id/textAccuracy"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:gravity="center_horizontal"
+		tools:text="Accuracy: No Contact"
+		android:textAlignment="center"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toTopOf="@+id/textHR"
+		app:layout_constraintTop_toBottomOf="@id/layoutBattery"/>
+
+	<TextView
+		android:id="@+id/textIpAddress"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		tools:text="http://[????::????:????:????:????]:8080\nhttp://192.168.100.123:8080"
+		android:textAlignment="center"
+		android:textSize="11sp"
+		android:layout_marginBottom="@dimen/ip_margin_bottom"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textHR"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

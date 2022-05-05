@@ -1,0 +1,53 @@
+plugins {
+	id 'com.android.library'
+	id 'kotlin-android'
+}
+
+android {
+	compileSdk 31
+
+	defaultConfig {
+		minSdk 23
+		targetSdk 31
+		versionCode 1
+		versionName "1.0"
+	}
+
+	buildTypes {
+		release {
+			debuggable true
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '..\\proguard-rules.pro'
+		}
+	}
+
+	sourceSets {
+		main.resources.srcDirs += 'src/main/resources'
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+
+	kotlinOptions {
+		jvmTarget = '1.8'
+	}
+
+	packagingOptions {
+		exclude 'META-INF/services/javax.servlet.ServletContainerInitializer'
+		exclude 'META-INF/services/reactor.blockhound.integration.BlockHoundIntegration'
+	}
+}
+
+dependencies {
+	//Kotlin
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+	implementation "androidx.core:core-ktx:1.7.0"
+
+	//Fragment Activity
+	implementation 'androidx.fragment:fragment-ktx:1.4.1'
+
+	//Wearable Stuff
+	implementation 'com.google.android.gms:play-services-wearable:17.1.0'
+}

@@ -1,0 +1,21 @@
+<resources>
+	<string name="alert_title_error_ios_too_old">Not Compatible</string>
+	<string name="button_ok">OK</string>
+	<string name="button_standalone">Standalone</string>
+	<string name="button_companion">Companion</string>
+	<string name="error_ios_too_old">Paired device is non-Android and Wear OS device is too old to work standalone.</string>
+	<string name="error_heartrate_permission">Heart Streamer needs Heart Rate Permission to run</string>
+
+	<string name="template_accuracy">Accuracy: %1$s</string>
+	<string name="text_starting_standalone">Starting in Standalone mode</string>
+	<string name="text_starting_companion">Starting in Companion mode</string>
+	<string name="text_option_standalone_or_companion">Start in Standalone or Companion Mode?</string>
+	<string name="battery">Battery</string>
+	<string-array name="accuracy_levels">
+        <item>No Contact</item>
+        <item>Unreliable</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+</resources>
