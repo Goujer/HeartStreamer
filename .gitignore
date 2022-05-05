@@ -1,2 +1,4 @@
 
 release/phone-release.aab
+minApi23/release/wear-minApi23-release.aab
+*.aab
